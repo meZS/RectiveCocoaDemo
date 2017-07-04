@@ -419,8 +419,13 @@
     
     [self.view addSubview:button];
     
+    #pragma mark - weakify /strongify
+#pragma mark - ReactiveCocoa常见宏。
+    //在 Block 内如果需要访问 self 的方法、变量，建议使用 weakSelf。
+    // 如果在 Block 内需要多次 访问 self，则需要使用 strongSelf。
+    @weakify(self)
     [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-       
+       @strongify(self) 
         NSLog(@"监听按钮被点击了");
         
         [self.view endEditing:YES];
@@ -456,11 +461,8 @@
         return nil;
     }];
     
-    //在 Block 内如果需要访问 self 的方法、变量，建议使用 weakSelf。
-    // 如果在 Block 内需要多次 访问 self，则需要使用 strongSelf。
-    @weakify(self)
+  
     RACSignal *request2 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        @strongify(self)
         // 发送请求2
         [subscriber sendNext:@"发送请求2"];
         return nil;
