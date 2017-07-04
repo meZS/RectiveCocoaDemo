@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>age</key>
+		<string>12</string>
+		<key>name</key>
+		<string>北京</string>
+		<key>m_city</key>
+		<string>上海</string>
+	</dict>
+    <dict>
+        <key>age</key>
+        <string>15</string>
+        <key>name</key>
+        <string>北京</string>
+        <key>m_city</key>
+        <string>上海</string>
+    </dict>
+    <dict>
+        <key>age</key>
+        <string>16</string>
+        <key>name</key>
+        <string>北京</string>
+        <key>m_city</key>
+        <string>上海</string>
+    </dict>
+</array>
+</plist>
