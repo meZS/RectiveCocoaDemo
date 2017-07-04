@@ -419,8 +419,7 @@
     
     [self.view addSubview:button];
     
-    #pragma mark - weakify /strongify
-#pragma mark - ReactiveCocoa常见宏。
+#pragma mark - weakify / strongify
     //在 Block 内如果需要访问 self 的方法、变量，建议使用 weakSelf。
     // 如果在 Block 内需要多次 访问 self，则需要使用 strongSelf。
     @weakify(self)
